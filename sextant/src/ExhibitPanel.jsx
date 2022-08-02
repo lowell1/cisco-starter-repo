@@ -7,13 +7,18 @@ export default function ExhibitPanel({ exhibits }) {
 
   return (
     // <div className="h-full flex items-center justify-center">
-    <div className="border-2 max-w-[1200px]">
+    <div className="border-2 max-w-[1200px] mt-20 mx-auto">
       <div className="divide-x-[2px] flex">
         {exhibits.map((exhibit, index) => (
           <span
+            tabIndex="0"
             role="button"
-            className={selectedTabIndex === index ? "grow " : "grow border-b-2"}
+            // className={selectedTabIndex === index ? "grow " : "grow border-b-2"}
+            className={`grow outline-0 ${
+              selectedTabIndex === index ? "" : "grow border-b-2"
+            }`}
             onClick={() => setSelectedTabIndex(index)}
+            onFocus={() => setSelectedTabIndex(index)}
           >
             {exhibit.tabLabel}
           </span>
