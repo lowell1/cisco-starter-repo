@@ -1,6 +1,7 @@
 import Banner from "../components/Banner";
 import ExhibitPanel from "../components/ExhibitPanel";
 import IpDisplay from "../components/exhibits/IpDisplay";
+import PacketLatencyGraph from "../components/exhibits/PacketLatencyGraph";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             tabLabel: "IPv6 Address",
             content: <IpDisplay useIpv6={true} />,
           },
+          { tabLabel: "Packet Latency", content: <PacketLatencyGraph /> },
         ]}
       />
     </div>
