@@ -17,7 +17,10 @@ function App() {
             tabLabel: "IPv6 Address",
             content: <IpDisplay useIpv6={true} />,
           },
-          { tabLabel: "Packet Latency", content: <PacketLatencyGraph /> },
+          {
+            tabLabel: "Packet Latency (graph)",
+            content: <PacketLatencyGraph />,
+          },
         ]}
       />
     </div>
